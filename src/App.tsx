@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import SignIn from './scenes/SignIn/SignIn';
 import SignUp from './scenes/signUp/SignUp';
 import Home from './scenes/Home/Home';
@@ -11,14 +11,13 @@ function App() {
   return (
     <>
 
-  <Router>
-    <Routes>
-    {/**routes go here */}
-    <Route index element={<Home />} />
-    <Route path='/signin' element={<SignIn/>}/>
-    <Route path='/signup' element={<SignUp/>}/>
-    </Routes>
-  </Router>
+<Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </Router>
     </>
   )
 }
