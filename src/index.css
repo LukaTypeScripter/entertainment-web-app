@@ -8,5 +8,15 @@
 body {
     background-color: #10141e;
     color: #fff;
-    font-family: 'Outfit', sans-serif;
+    font-family: Outfit,sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+img,svg{
+    display: block;
+}
+h1, h2, h3, h4 {
+    color: white;
+    font-weight: 300;
 }
