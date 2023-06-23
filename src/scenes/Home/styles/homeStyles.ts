@@ -4,6 +4,16 @@ import styled from "styled-components";
 import { DefStyles } from "../../../DefaultStyles";
 
 export const MovieAppMain = styled.div`
+@media screen and (min-width: 75rem){
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100vh;
+    overflow-y: hidden;
+    padding: 2rem;
+    padding-right: 0;
+}
+
+   
 
 
 `
@@ -14,31 +24,82 @@ align-items: center;
 height: 56px;
 padding-inline: 1rem;
 background-color:${DefStyles.MainColors.SemiDarkBlue};
+@media screen and (min-width: 75rem){
+    height: 90vh;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0;
+    width: 96px;
+    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+    margin: 0;
+    border-radius: 20px;
+}
+
+    
+
 
 `
-export const Links = styled(Link)`
+export const Links = styled(Link)<{ isActive: boolean }>`
     outline: none;
     transition: transform .2s;
+    
+
+    /* background-color: ${(props) => (props.isActive ? 'white' : '')}; */
+     &:where(:focus,:hover) {
+    transform: scale(1.1);
+}
 `
 export const Imgs = styled.img`
 width: 25px;
 display: block;
+@media screen and (min-width: 75rem){
+    margin-bottom: 75px;
+}
 `
 export const ImgPRimary = styled.img`
 width: 16px;
 display: block;
+
+
+ 
+
+
+
 `
 export const AvatarIMg = styled.img`
 width: 100%;
 width: 24px;
+@media screen and (min-width: 75rem){
+    margin-top: 28rem;
+    width: 2.5rem;
+}
+
+    
+
 `
 
 export const NavBarPRimary = styled.div`
     display: flex;
     gap: 1.5rem;
+    @media screen and (min-width: 75rem){
+        flex-direction: column;
+    gap: 2.5rem;
+    }
+
+  
+
 `
 export const Main = styled.nav`
 padding: 1.5rem 1rem 4rem;
+@media screen and (min-width: 75rem){
+    padding-inline: 2.25rem;
+    margin-bottom: -2rem;
+    overflow-y: scroll;
+}
+
+    
+
 `
 
 export const SearchBar = styled.div`
@@ -89,12 +150,24 @@ export const TrandingVideos = styled.ul`
     overscroll-behavior-inline: contain;
     margin-inline: -1rem;
     padding-inline: 1rem;
+  
+    @media screen and (min-width: 45rem){
+        gap: 2.5rem;
+    margin-inline: -1.5rem;
+    padding-inline: 1.5rem;
+    }
+ 
+
 `
 export const TrendingVideo = styled.li`
 flex: 0 0 15rem;
 height: 8.75rem;
 border-radius:0.5rem 0.5rem 0 0;
 overflow: hidden;
+@media screen and (min-width: 45rem){
+        flex-basis: 29.375rem;
+    height: 14.375rem;
+    }
 `
 export const PLayBtn = styled.button`
     position: absolute;
@@ -126,7 +199,7 @@ export const VIdeo = styled.div`
   }
 `
 export const VideoBookMark = styled.button`
-position: relative;
+position: absolute;
 top: 0.5rem;
 right: 0.5rem;
 width: 2rem;
@@ -145,8 +218,15 @@ export const VideoCOntent = styled.div`
     background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.75) 100%);
     padding: 1rem;
     position: relative;
-    top: 55px;
+    top: 70px;
     width: 100%;
+    @media screen and (min-width: 45rem){
+        padding: 1.5rem;
+        top:150px;
+    }
+
+  
+
 `
 export const VIdeoInfo = styled.div`
     display: flex;
@@ -179,3 +259,86 @@ export const MovieName = styled.h3`
     font-size: .9375rem;
 `
 
+
+
+
+
+export const RecomendedSection = styled.section`
+margin-top: 20px;
+`
+export const VideosTitle = styled.h2`
+    font-size: 1.25rem;
+    letter-spacing: -.3px;
+    margin-bottom: 1.5rem;
+`
+export const VideosList = styled.ul`
+    --column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--column-count),1fr);
+    gap: 1rem;
+    @media screen and (min-width: 75rem){
+    --column-count: 4;
+    row-gap: 2rem;
+    column-gap: 2.5rem;
+}
+@media screen and (min-width: 45rem){
+  --column-count: 3;
+    row-gap: 1.5rem;
+    column-gap: 1.875rem;
+}
+@media screen and (min-width: 100rem){
+    --column-count: 5;
+}
+
+   
+
+
+  
+
+`
+export const VideosItem = styled.li`
+
+
+    
+
+`
+
+export const RecomendedVideo = styled.div`
+
+`
+
+export const VIdeoCard = styled.div`
+position: relative;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+    @media screen and (min-width: 45rem){
+        height: 140px;
+    }
+    &:hover > ${PLayBtn} {
+    display: flex;
+  }
+   
+
+`
+
+export const VideoInfo = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    opacity: .75;
+    margin-bottom: 0.25rem;
+    font-size: .6875rem;
+
+`
+
+
+export const BookMarkedVideo = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+`
