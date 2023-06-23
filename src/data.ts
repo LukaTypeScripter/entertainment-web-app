@@ -1,4 +1,4 @@
-import Small from './assets/thumbnails/beyond-earth/trending/small.jpg'
+
 import BottomGear from './assets/thumbnails/bottom-gear/trending/small.jpg'
 import undiscovered from './assets/thumbnails/undiscovered-cities/trending/small.jpg'
 import ftvseries from './assets/thumbnails/1998/trending/small.jpg'
@@ -10,9 +10,18 @@ import nomLandBeyond from './assets/thumbnails/no-land-beyond/regular/small.jpg'
 import DUringTHeHunt from './assets/thumbnails/during-the-hunt/regular/small.jpg'
 import AutoSportTHeseries from './assets/thumbnails/autosport-the-series/regular/small.jpg'
 import sameAnswer from './assets/thumbnails/same-answer-2/regular/small.jpg'
-// import Small from './assets/thumbnails/beyond-earth/trending/small.jpg'
-// import Small from './assets/thumbnails/beyond-earth/trending/small.jpg'
-// import Small from './assets/thumbnails/beyond-earth/trending/small.jpg'
+import Small from './assets/thumbnails/beyond-earth/trending/small.jpg'
+import below from './assets/thumbnails/below-echo/regular/small.jpg'
+import relantless from './assets/thumbnails/relentless/regular/small.jpg'
+import ours from './assets/thumbnails/community-of-ours/regular/small.jpg'
+import van from './assets/thumbnails/van-life/regular/small.jpg'
+import heiress from './assets/thumbnails/the-heiress/regular/small.jpg'
+import track from './assets/thumbnails/off-the-track/regular/small.jpg'
+import hill from './assets/thumbnails/whispering-hill/regular/small.jpg'
+import help from './assets/thumbnails/112/regular/small.jpg'
+import heart from './assets/thumbnails/lone-heart/regular/small.jpg'
+import line from './assets/thumbnails/production-line/regular/small.jpg'
+import rocks from './assets/thumbnails/the-rockies/regular/small.jpg'
 const  data = [
     {
       "title": "Beyond Earth",
@@ -218,7 +227,7 @@ const  data = [
       "title": "Below Echo",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/below-echo/regular/small.jpg",
+          "small": `${below}`,
           "medium": "./assets/thumbnails/below-echo/regular/medium.jpg",
           "large": "./assets/thumbnails/below-echo/regular/large.jpg"
         }
@@ -233,7 +242,7 @@ const  data = [
       "title": "The Rockies",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/the-rockies/regular/small.jpg",
+          "small": `${rocks}`,
           "medium": "./assets/thumbnails/the-rockies/regular/medium.jpg",
           "large": "./assets/thumbnails/the-rockies/regular/large.jpg"
         }
@@ -248,7 +257,7 @@ const  data = [
       "title": "Relentless",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/relentless/regular/small.jpg",
+          "small": `${relantless}`,
           "medium": "./assets/thumbnails/relentless/regular/medium.jpg",
           "large": "./assets/thumbnails/relentless/regular/large.jpg"
         }
@@ -263,7 +272,7 @@ const  data = [
       "title": "Community of Ours",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/community-of-ours/regular/small.jpg",
+          "small": `${ours}`,
           "medium": "./assets/thumbnails/community-of-ours/regular/medium.jpg",
           "large": "./assets/thumbnails/community-of-ours/regular/large.jpg"
         }
@@ -278,7 +287,7 @@ const  data = [
       "title": "Van Life",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/van-life/regular/small.jpg",
+          "small": `${van}`,
           "medium": "./assets/thumbnails/van-life/regular/medium.jpg",
           "large": "./assets/thumbnails/van-life/regular/large.jpg"
         }
@@ -293,7 +302,7 @@ const  data = [
       "title": "The Heiress",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/the-heiress/regular/small.jpg",
+          "small": `${heiress}`,
           "medium": "./assets/thumbnails/the-heiress/regular/medium.jpg",
           "large": "./assets/thumbnails/the-heiress/regular/large.jpg"
         }
@@ -308,7 +317,7 @@ const  data = [
       "title": "Off the Track",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/off-the-track/regular/small.jpg",
+          "small": `${track}`,
           "medium": "./assets/thumbnails/off-the-track/regular/medium.jpg",
           "large": "./assets/thumbnails/off-the-track/regular/large.jpg"
         }
@@ -323,7 +332,7 @@ const  data = [
       "title": "Whispering Hill",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/whispering-hill/regular/small.jpg",
+          "small": `${hill}`,
           "medium": "./assets/thumbnails/whispering-hill/regular/medium.jpg",
           "large": "./assets/thumbnails/whispering-hill/regular/large.jpg"
         }
@@ -338,7 +347,7 @@ const  data = [
       "title": "112",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/112/regular/small.jpg",
+          "small": `${help}`,
           "medium": "./assets/thumbnails/112/regular/medium.jpg",
           "large": "./assets/thumbnails/112/regular/large.jpg"
         }
@@ -353,7 +362,7 @@ const  data = [
       "title": "Lone Heart",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/lone-heart/regular/small.jpg",
+          "small":`${heart}`,
           "medium": "./assets/thumbnails/lone-heart/regular/medium.jpg",
           "large": "./assets/thumbnails/lone-heart/regular/large.jpg"
         }
@@ -368,7 +377,7 @@ const  data = [
       "title": "Production Line",
       "thumbnail": {
         "regular": {
-          "small": "./assets/thumbnails/production-line/regular/small.jpg",
+          "small": `${line}`,
           "medium": "./assets/thumbnails/production-line/regular/medium.jpg",
           "large": "./assets/thumbnails/production-line/regular/large.jpg"
         }
