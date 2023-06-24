@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import SignIn from './scenes/SignIn/SignIn';
 import SignUp from './scenes/signUp/SignUp';
@@ -11,7 +11,7 @@ import { MovieAppMain } from './scenes/Home/styles/homeStyles';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <MovieAppMain>
