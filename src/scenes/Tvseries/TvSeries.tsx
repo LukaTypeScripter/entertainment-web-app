@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import data from '../../data';
 import { Main, SearchBar, SearchLogo, SearchInput, RecomendedSection, VideosTitle, VideosList, VideosItem, RecomendedVideo, VIdeoCard, VideoBookMark, PLayBtn, VideoInfo, VideoYear, Dot, VideoCategory, VideoRating, MovieName } from '../Home/styles/homeStyles';
 import Search from '../../assets/icon-search.svg'
+import AppContext from '../../context/AppContext';
 function TvSeries() {
-    const [trendingMovies ,setTrendingMovies ] = useState(data)
+    const {setTrendingMovies,trendingMovies,toggleBookmark} = useContext(AppContext)
     const [searchQuery, setSearchQuery] = useState('');
  
     const handleSearch = (e:React.ChangeEvent<HTMLInputElement>) => {
@@ -14,7 +15,9 @@ function TvSeries() {
       );
       setTrendingMovies(filteredMovies);
     };
-  
+  if(trendingMovies === undefined){
+    return <div>loading</div>
+  }
   return (
    <Main>
    <SearchBar>
@@ -33,7 +36,7 @@ function TvSeries() {
                 <VideosItem key={index}>
                 <RecomendedVideo>
                   <VIdeoCard style={{ backgroundImage: `url(${movie.thumbnail.regular.small})` }}>
-                    <VideoBookMark>
+                    <VideoBookMark onClick={() => toggleBookmark(index)}>
                       <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z"
